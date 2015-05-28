@@ -37,7 +37,7 @@
 	Chart.defaults = {
 		global: {
 			// Boolean - Whether to animate the chart
-			animation: true,
+			animation: false,
 
 			// Number - Number of animation steps
 			animationSteps: 60,
@@ -87,13 +87,13 @@
 			scaleFontStyle: "normal",
 
 			// String - Scale label font colour
-			scaleFontColor: "#666",
+			scaleFontColor: "#f8f8f8",
 
 			// Boolean - whether or not the chart should be responsive and resize when the browser does.
 			responsive: false,
 
-                        // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-                        maintainAspectRatio: true,
+            // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+            maintainAspectRatio: true,
 
 			// Boolean - Determines whether to draw tooltips on the canvas or not - attaches events to touchmove & mousemove
 			showTooltips: true,
@@ -129,7 +129,7 @@
 			tooltipTitleFontColor: "#f8f8f8",
 
 			// Number - pixel width of padding around tooltip text
-			tooltipYPadding: 5,
+			tooltipYPadding: 10,
 
 			// Number - pixel width of padding around tooltip text
 			tooltipXPadding: 10,
@@ -138,7 +138,7 @@
 			tooltipCaretSize: 8,
 
 			// Number - Pixel radius of the tooltip border
-			tooltipCornerRadius: 3,
+			tooltipCornerRadius: 1,
 
 			// Number - Pixel offset from point x to tooltip edge
 			tooltipXOffset: 10,
@@ -1955,7 +1955,7 @@
 		scaleBeginAtZero : true,
 
 		//Boolean - Whether grid lines are shown across the chart
-		scaleShowGridLines : false,
+		scaleShowGridLines : true,
 
 		//String - Colour of the grid lines
 		scaleGridLineColor : "rgba(0,0,0,.05)",
@@ -1967,13 +1967,13 @@
 		barShowStroke : false,
 
 		//Number - Pixel width of the bar stroke
-		barStrokeWidth : 2,
+		barStrokeWidth : 0,
 
 		//Number - Spacing between each of the X value sets
-		barValueSpacing : 2,
+		barValueSpacing : 0,
 
 		//Number - Spacing between data sets within X values
-		barDatasetSpacing : 2,
+		barDatasetSpacing : 0,
 
 		//String - A legend template
 		legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
@@ -2814,13 +2814,13 @@
 		scaleShowLine : true,
 
 		//Boolean - Stroke a line around each segment in the chart
-		segmentShowStroke : true,
+		segmentShowStroke : false,
 
 		//String - The colour of the stroke on each segement.
 		segmentStrokeColor : "#fff",
 
 		//Number - The width of the stroke value in pixels
-		segmentStrokeWidth : 2,
+		segmentStrokeWidth : 0,
 
 		//Number - Amount of animation steps
 		animationSteps : 100,

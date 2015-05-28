@@ -16,9 +16,7 @@ class AccountController extends Database {
 					"tool" => $row['tool'],
 					"image" => $row['image'],
 					"restricted" => $row['restricted'],
-					"grade" => $row['grade'],
-					"style" => $row['style'],
-					'footer' => $row['footer']
+					"grade" => $row['grade']
 					
 				);
 				if (isset($base->pagestructure[$row['url']])) {

@@ -261,6 +261,26 @@ private function ago($datetime, $full=false){
 		}
 	}
 	
+	function getFactionCost($scroll)
+	{
+		if ($scroll['costgrowth'] > 0)
+		{
+			return $scroll['costgrowth'];
+		}
+		elseif ($scroll['costorder'] > 0)
+		{
+			return $scroll['costorder'];
+		}
+		elseif ($scroll['costenergy'] > 0)
+		{
+			return $scroll['costenergy'];
+		}
+		elseif ($scroll['costdecay'] > 0)
+		{
+			return $scroll['costdecay'];
+		}
+	}
+	
 	/**
 	 * Gets the cost of the scroll stack
 	 * @param Scroll $scroll

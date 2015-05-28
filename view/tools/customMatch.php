@@ -7,23 +7,64 @@
 		<div class="col-12">
 			<div class="col-6">
 				<div class="form-element">
-                                    <label>Timer: <small>Amount of Seconds a turn lasts</small>
-                                           <input type="number" id="time" value="90">
-                                    </label>
-				
+                    <label>Timer: <small>Amount of Seconds a turn lasts</small>
+                           <input type="number" id="time" value="90">
+                    </label>
 				</div>
 			</div>
-                </div>
-                <div class="col-12">
-                        <div class="form-element">
-                                <div><label for="boss">Unlimited Wild <small>No limit for Wild sacrificing</small></label></div>
-                                <button id="nowildlmt" class="btn btn-checkbox"></button>
+			<div class="col-6" hidden>
+				<div class="form-element">
+			        <label>Timer Type: <small class="color-danger">Change the timer type (wip)</small>
+			               <select>
+			               		<option value="totalSeconds">Normal</option>
+			               		<option value="infinite">Infinite</option>
+			               </select>
+			        </label>
+				</div>
 			</div>
-                </div>
+		</div>
+        <div class="col-12">
+        	<div class="col-6">
+				<div class="form-element">
+					<div><label for="boss">Unlimited Wild <small>No limit for Wild sacrificing</small></label></div>
+					<button id="nowildlmt" class="btn btn-checkbox"></button>
+				</div>
+			</div>
+			<div class="col-6" hidden>
+				<div class="form-element">
+					<label>Ai Options (wip)</label>
+					<div>
+					<button id="more-resources-player-one" data-toggle-target="ai-options" class="btn toggle" name="more-resources">More</button></div>
+				</div>
+			</div>
+        </div>
+        <div class="col-12" data-toggle-name="ai-options" hidden>
+	        <div class="row">
+	        		<div class="col-8 align-center col-offset-2">
+	        
+	        		<label>Ai Difficolity</label>
+	        		<div class="form-element radio-col">
+	        			<div class="col-4 align-left">
+	        				<div class="col-12"><h3><label for="ai-easy">Easy</label></h3></div>
+	        				<button id="ai-easy" class="btn btn-radio"></button>
+	        			</div>
+	        			<div class="col-4 algin-center">
+	        				<div class="col-12"><h3><label for="ai-medium">Medium</label></h3></div>
+	        				<button id="ai-medium" class="btn btn-radio success"></button>
+	        			</div>
+	        			<div class="col-4 align-right">
+	        				<div class="col-12"><h3><label for="ai-hard">Hard</label></h3></div>
+	        				<button id="ai-hard" class="btn btn-radio"></button>
+	        			</div>
+	        		</div>
+	        
+	        	</div>
+        	</div>
+        </div>
 		<div class="col-12">
 			<div class="col-6">
 				<div class="form-element">
-                                        <label>Resources Player 1<small> </small>
+                     <label>Resources Player 1<small> </small>
 						<input id="resources-player-one" type="number" name="" value="" placeholder="Player 1"/>
 					</label>
 				</div>
@@ -617,6 +658,25 @@ $(function() {
 		$("#start-rnd").addClass("success");
 		$("#start-p1").removeClass("success");
 		$("#start-p2").removeClass("success");
+	});
+	
+	
+	$("#ai-easy").click(function() {
+		$("#ai-easy").addClass("success");
+		$("#ai-medium").removeClass("success");
+		$("#ai-hard").removeClass("success");
+	});
+	
+	$("#ai-medium").click(function() {
+		$("#ai-medium").addClass("success");
+		$("#ai-easy").removeClass("success");
+		$("#ai-hard").removeClass("success");
+	});
+	
+	$("#ai-hard").click(function() {
+		$("#ai-hard").addClass("success");
+		$("#ai-medium").removeClass("success");
+		$("#ai-easy").removeClass("success");
 	});
 	
 	$("#enchant-p2").click(function() {

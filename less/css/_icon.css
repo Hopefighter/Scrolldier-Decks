@@ -6,6 +6,9 @@ i[class^='icon-'] {
   background-repeat: no-repeat;
   background-position: center center;
 }
+i[class^='icon-'].text {
+	margin-bottom: -10px;
+}
 i[class^='icon-'].icon-decay {
   background-image: url(../img/factions/decay.png);
 }

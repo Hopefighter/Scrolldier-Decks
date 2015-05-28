@@ -18,13 +18,13 @@
 		scaleGridLineWidth : 1,
 
 		//Boolean - If there is a stroke on each bar
-		barShowStroke : true,
+		barShowStroke : false,
 
 		//Number - Pixel width of the bar stroke
-		barStrokeWidth : 2,
+		barStrokeWidth : 0,
 
 		//Number - Spacing between each of the X value sets
-		barValueSpacing : 5,
+		barValueSpacing : 3,
 
 		//Boolean - Whether bars should be rendered on a percentage base
 		relativeBars : false,
